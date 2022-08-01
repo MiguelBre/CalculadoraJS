@@ -1,5 +1,6 @@
 console.log('Calculadora Simples');
 
+//Import do arquivo para realizar calculos matematicos
 const {  calcular } = require('./Módulo/calculadora.js');
 
 const { exit } = require('process');
