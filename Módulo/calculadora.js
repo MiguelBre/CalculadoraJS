@@ -57,3 +57,10 @@ function calcular(valor1, valor2, tipoCalculo){
         return resultado;
     }
 }
+
+
+//As funções que serão importadas em outros projetos, precisam obrigatóriamente serem incluídas no module.exports
+//As funções que não forem incluídas no module.exports, elas irão funcionar apenas LOCALMENTE neste arquivo
+module.exports = {
+    calcular
+}

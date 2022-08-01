@@ -1,5 +1,7 @@
 console.log('Calculadora Simples');
 
+const {  calcular } = require('./Módulo/calculadora.js');
+
 const { exit } = require('process');
 //importa a bibliioteca de entrada de dados
 var readline = require('readline');
