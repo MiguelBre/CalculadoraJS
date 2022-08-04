@@ -26,13 +26,13 @@ const calcular = function(valor1, valor2, tipoCalculo){
     
                 switch(calculo){
                     case 'SOMAR': case '+':
-                        resultado = numero1 + numero2;
+                        resultado = somar (numero1, numero2);
                         break;
                     case 'SUBTRAIR': case '-':
-                        resultado = numero1 - numero2;
+                        resultado = subtrair (numero1, numero2);
                         break;
                     case 'MUTIPLICAR': case '*':
-                        resultado = numero1 * numero2;
+                        resultado = multiplicar (numero1, numero2);
                         break;
                     case 'DIVIDIR': case '/':
                         if(numero2 == 0){
@@ -40,7 +40,7 @@ const calcular = function(valor1, valor2, tipoCalculo){
                             erro = true;
                         }
                         else{
-                            resultado = numero1 / numero2;
+                            resultado = dividir (numero1, numero2);
                         }
                         break;
                     default:
@@ -53,10 +53,15 @@ const calcular = function(valor1, valor2, tipoCalculo){
         if(erro){
             return false;
         }else{
-            return resultado;
+            return resultado.toFixed(2);
         }
     }
 
+    //Modelo de função chamado de ARROW FUNCTION
+    const somar = (valor1, valor2) => parseFloat(valor1) + parseFloat(valor2);
+    const subtrair = (valor1, valor2) => parseFloat(valor1) - parseFloat(valor2);
+    const multiplicar = (valor1, valor2) => parseFloat(valor1) * parseFloat(valor2);
+    const dividir = (valor1, valor2) => parseFloat(valor1) / parseFloat(valor2);
 
 //Método tradicional de se criar uma FUNÇÃO
     //Formato MENOS utilizado no JS
